@@ -59,7 +59,7 @@ const RedditPostCard = ({ subreddit }: { subreddit: string }) => {
 
 const RightSidebar = () => {
   return (
-    <aside className="sticky top-0 h-screen w-80 flex-col space-y-6 border-l border-gray-700 bg-[#181818] p-6 hidden lg:flex">
+    <aside className="sticky top-0 h-screen w-80 flex-col space-y-6 border-l border-gray-700 bg-[#181818] p-6 hidden md:flex">
       {/* SP500 Chart Placeholder */}
       <div className="bg-[#181818] p-4 rounded-lg border border-gray-700 h-48">
         <h3 className="font-bold text-gray-400 mb-2">S&P 500 (5Y)</h3>
