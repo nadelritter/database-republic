@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "ISIN": "CA03770A3073",
+    "Name": "Apollo Silver Corp. Registered Shares o.N.",
+    "date": "2025-09-23"
+  },
+  {
+    "ISIN": "CA85207K1075",
+    "Name": "Sprott Physical Silver",
+    "date": "2025-09-23"
+  },
+  {
+    "ISIN": "IE000OYABFQ2",
+    "Name": "iShares VI plc - iShares Russell 2000 Swap UCITS ETF EUR",
+    "date": "2025-09-23"
+  }
+]

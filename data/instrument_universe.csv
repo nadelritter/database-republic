@@ -106,7 +106,6 @@ AU000000BCI0,BCI Minerals
 AU000000BEN6,Bendigo Bank
 AU000000BGA8,Bega Cheese
 AU000000BHP4,BHP Billiton
-AU000000BKW4,Brickworks
 AU000000BKY0,Berkeley Energía
 AU000000BMN9,Bannerman Resources
 AU000000BNR8,Bulletin Resources
@@ -887,6 +886,7 @@ CA03634K2020,Anonymous Intelligence
 CA03634T1049,AnorTech
 CA0369271014,Antimony Resources Corp. Registered Shares o.N.
 CA03753D1042,Apex Critical Metals
+CA03770A3073,Apollo Silver Corp. Registered Shares o.N.
 CA03783P1018,Appia Rare Earth & Uranium
 CA03835T4081,Aptose Biosciences Inc. Reg.Shs JAN 2025 o.N.
 CA03879J1003,Arbutus Biopharma
@@ -1805,7 +1805,6 @@ CA67059X2059,Nuran Wireless
 CA67072Q1046,NuVista Energy
 CA67077M1086,Nutrien
 CA67113W2013,O2Gold
-CA6739101054,Oberon Uranium
 CA6744822033,Obsidian Energy
 CA6752224007,OceanaGold Corp. Registered Shares o.N.
 CA6814721065,Olympia Financial Group
@@ -1848,7 +1847,6 @@ CA7026573054,Pasofino Gold
 CA7029251088,Pason Systems
 CA70323P2061,Pathfinder Ventures
 CA70324L1058,Pathway Health
-CA70337R1073,PATRIOT BATTERY MET.INC.
 CA70344Q1000,Patterson Metals
 CA70452C1095,PayPal Holdings Inc. Reg.Shs.(Canad.Depos.Receipts)
 CA70470T2092,PeakBirch Commerce
@@ -2073,6 +2071,7 @@ CA8485101031,Spin Master
 CA84859H2072,Spirit Blockchain Capital
 CA8491131055,Sponsorsone
 CA8520662088,Sprott
+CA85207K1075,Sprott Physical Silver
 CA85235Q1000,St-Georges Eco-Mining
 CA85238C1086,Sranan Gold
 CA8525403017,StageZero Life Sciences
@@ -10176,7 +10175,7 @@ ZAE000005443,Pick'N Pay
 ZAE000006284,Sappi
 ZAE000006896,Sasol
 ZAE000012084,Shoprite
-ZAE000013181,Anglo Platinum
+ZAE000013181,Valterra Platinum
 ZAE000015228,Harmony
 ZAE000017745,DataTec
 ZAE000018123,Gold Fields
@@ -10888,6 +10887,7 @@ IE000OKVTDF7,MSCI USA Value Factor ESG USD (Acc)
 IE000ONQ3X90,Msci World 2C EUR Hedged (Acc)
 IE000OULL4R4,MSCI USA NSL USD (Acc)
 IE000OVF8Q66,Emerging Markets Equity Enhanced Active USD (Acc)
+IE000OYABFQ2,iShares VI plc - iShares Russell 2000 Swap UCITS ETF EUR
 IE000P0R7WK6,Sustainable Euro Green Sovereign EUR (Acc)
 IE000P16KP52,Nasdaq Cybersecurity Class C Hedged EUR (Acc)
 IE000P3D0W60,Renewable Energy USD (Acc)

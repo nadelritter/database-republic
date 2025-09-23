@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "ISIN": "AU000000BKW4",
+    "Name": "Brickworks",
+    "date": "2025-09-23"
+  },
+  {
+    "ISIN": "CA6739101054",
+    "Name": "Oberon Uranium",
+    "date": "2025-09-23"
+  },
+  {
+    "ISIN": "CA70337R1073",
+    "Name": "PATRIOT BATTERY MET.INC.",
+    "date": "2025-09-23"
+  }
+]
