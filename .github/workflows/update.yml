@@ -7,6 +7,10 @@ on:
     - cron: "0 */6 * * *"
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
+# Add this permissions block right here
+permissions:
+  contents: write
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
