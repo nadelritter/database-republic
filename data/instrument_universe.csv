@@ -1247,6 +1247,7 @@ CA28616D1087,Electrum Discovery
 CA28617B6061,Electrovaya
 CA2861812014,Element Fleet Management
 CA28619A2002,Element79 Gold
+CA28619K2083,Elemental Altus Royalties Corp Registered Shares o.N.
 CA28655A1066,Eli Lilly and Company Reg.Shs.(CDR Reg.S.CAD Hdg.)
 CA2899003008,Eloro Resources
 CA2902571041,Else Nutrition
@@ -4318,7 +4319,6 @@ GB00B1VNSX38,Drax Group
 GB00B1VQ6H25,YouGov
 GB00B1WY2338,Smiths Group
 GB00B1XH2C03,Ferrexpo
-GB00B1XZS820,Anglo American
 GB00B1YKG049,Intl. Personal
 GB00B1YPC344,Fuller Smith & Turner PLC
 GB00B1YW4409,3I Group
@@ -6198,7 +6198,6 @@ KYG9835C1087,Yeahka
 KYG984191075,Yihai
 KYG9843H1074,Yida China Holdings
 KYG9845C1069,Yidu Tech
-KYG9845F2080,LakeShore Biopharma
 KYG9877S1021,Yue Da International Holdings
 KYG9879S1003,YSB
 KYG9887T1168,Zai Lab
@@ -6937,7 +6936,6 @@ SE0014428512,Surgical Science Sweden
 SE0014504817,Loomis AB
 SE0014781795,Addtech
 SE0014808838,Nordic Paper Holding
-SE0014855292,Readly International
 SE0014960373,Sweco (A)
 SE0014990966,Lagercrantz
 SE0015346135,Stillfront
@@ -6958,6 +6956,7 @@ SE0015988019,Nibe Industrier
 SE0015988100,MoveByBike Europe
 SE0015988373,Sedana Medical
 SE0016074249,MilDef Group
+SE0016075063,Intellego Technologies
 SE0016101844,Sinch
 SE0016589188,Electrolux
 SE0016609499,Systemair
@@ -8896,7 +8895,6 @@ US5663241090,Marcus & Millichap
 US5663301068,Marcus
 US56656T1051,Marfrig Global Foods
 US5679081084,MarineMax
-US56804T3041,Marin Software
 US5705351048,Markel
 US57060D1081,MarketAxess
 US57142B1044,Marqeta
@@ -9127,7 +9125,6 @@ US6703461052,Nucor
 US67054R2031,Nukkleus
 US67059N1081,Nutanix
 US67066G1040,NVIDIA
-US67075A1060,Nuveen Preferred Securities & Income Opportunities Fund
 US6708371033,OGE Energy
 US67090S1087,Nuveen Churchill Dir.Lend.
 US67098H1041,O-I Glass
@@ -9656,7 +9653,6 @@ US84265V1052,Southern Copper
 US84470P1093,Southside Bancshares
 US8447411088,Southwest Airlines
 US84652A1025,Spark New Zealand (ADR)
-US8472151005,SpartanNash
 US84790A1051,Spectrum Brands
 US84833T1034,Spero Therapeutics
 US8485603067,Spire Global
@@ -10462,6 +10458,7 @@ IE0000EAPBT6,Active Us Premium Equity Income USD (Acc)
 IE0000FCGYF9,S&P China A MidCap 500 Swap USD (Acc)
 IE0000H445G8,New China ESG USD (Acc)
 IE0000J0F3C5,USD Corporate Bond Research Enhanced Index ESG EUR Hedged
+IE0000KA1ZX3,Euro Corporate Bond EUR (Acc)
 IE0000MMQ5M5,MSCI USA ESG EUR (Acc)
 IE0000MR4GH9,iBonds Dec 2032 EUR (Dist)
 IE0000P0RPE6,World Equity High Income USD (Acc)
@@ -10508,6 +10505,7 @@ IE0002Y8CX98,Europe Defence Ucits Eur (Acc)
 IE0002ZM3JI1,USA Net Zero Pathway Paris Aligned USD (Acc)
 IE00034XRBU1,2030 USD Corporate Bond (Acc)
 IE00036F4K40,MSCI Global SDG 3 Good Health USD (Acc)
+IE000389GTC0,Global Esg Government Bond EUR (Acc)
 IE0003A512E4,Artificial Intelligence & Robotics USD (Acc)
 IE0003B4BV34,MSCI USA Tech 125 ESG Universal USD (Acc)
 IE0003BJ2JS4,Uranium and Nuclear Energy USD (Acc)
@@ -10605,6 +10603,7 @@ IE0007WMHDE3,European Green Deal EUR (Acc)
 IE0007Y8Y157,Quantum Computing USD (Acc)
 IE0007YBWBE5,iBonds Dec 2032 USD (Acc)
 IE00080CTQA4,ESG Shiller Barclays CAPE® Europe Sector EUR (Acc)
+IE0008119MO8,S&P India Tech Eur (Acc)
 IE00081SF8K7,Eur Government Bond Active EUR (Dist)
 IE0008470928,STOXX Europe 50 EUR (Dist)
 IE0008471009,Core EURO STOXX 50 EUR (Dist)
@@ -10858,9 +10857,11 @@ IE000MO2MB07,New Economy Real Estate USD (Acc)
 IE000MQ5XEW1,Multi-Strategy Enhanced Commodities ex-Agriculture &
 IE000MUAJIF4,Corporate Bond ESG Short Duration Multi-Factor EUR (Dist)
 IE000MWUQBJ0,Euro Stoxx 50 EUR (Acc)
+IE000MY0C911,Global Corporate Bond EUR (Acc)
 IE000MYCJA42,Amundi Msci North America Esg C (Acc)
 IE000N1ZEIG9,Net Zero Pathway ESG USD (Acc)
 IE000N42HDP2,Quantitative Strategies Global Equity Low Volatility Low
+IE000N5JOGS2,China Government Local Bond USD (Acc)
 IE000N6I8IU2,Nasdaq Equity Premium USD (Acc)
 IE000N9MLVT1,MSCI Europe Climate Transition EUR (Acc)
 IE000NBRE3P7,ishares Ultrashort Bond ESG EUR (Acc)
@@ -10911,6 +10912,7 @@ IE000QADMYA3,ESG EUR Corporate Bond (Acc)
 IE000QF66PE6,S&P 500 Scored & Screened EUR (Acc)
 IE000QGWZZO0,Japan Research Enhanced Index Equity ESG EUR Hedged (Acc)
 IE000QIF5N15,Prime Global USD (Dist)
+IE000QL3QEM2,Global Government Bond EUR (Acc)
 IE000QLV3SY5,Emerging Markets Paris Aligned Climate USD (Acc)
 IE000QMIHY81,MSCI World EUR Hedged (Acc)
 IE000QOLLXO2,Europe Research Enhanced Index Equity SRI Paris Aligned
@@ -10984,6 +10986,7 @@ IE000UZZ5D45,MSCI World Small Cap ESG Broad Transition USD (Acc)
 IE000UZZ5SU2,Active Us Growth EUR Hedged (Acc)
 IE000V04SL39,MSCI USA High Dividend Yield ESG USD (Dist)
 IE000V0GDVU7,MSCI Global SDG 11 Sustainable Cities USD (Acc)
+IE000V6KDJC9,MSCI World Selection EUR Hedged (Dist)
 IE000V93BNU0,MSCI World ESG Climate Paris Aligned USD (Acc)
 IE000VA628D5,S&P 500 Top 20
 IE000VCBWFL8,MSCI EMU High Dividend Yield ESG EUR (Dist)
@@ -11056,6 +11059,7 @@ IE000YSJPNV8,Eur High Yield Bond Active Ucits Etf Eur (Dist)
 IE000YSUEJ32,India INR Government Bond USD (Acc)
 IE000YU9K6K2,Space Innovators USD (Acc)
 IE000YUTMIU2,Global Quality Income USD (Acc)
+IE000YUU9UG5,China Government Local Bond EUR (Acc)
 IE000YYE6WK5,Defense USD (Acc)
 IE000YZIVX22,Catholic Principles Emerging Markets Sovereign Debt USD
 IE000Z0FC0G5,MSCI World Ex USA USD (Dist)
