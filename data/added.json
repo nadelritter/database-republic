@@ -1,5 +1,55 @@
 [
   {
+    "ISIN": "CA28619K2083",
+    "Name": "Elemental Altus Royalties Corp Registered Shares o.N.",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "SE0016075063",
+    "Name": "Intellego Technologies",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "IE0000KA1ZX3",
+    "Name": "Euro Corporate Bond EUR (Acc)",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "IE000389GTC0",
+    "Name": "Global Esg Government Bond EUR (Acc)",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "IE0008119MO8",
+    "Name": "S&P India Tech Eur (Acc)",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "IE000MY0C911",
+    "Name": "Global Corporate Bond EUR (Acc)",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "IE000N5JOGS2",
+    "Name": "China Government Local Bond USD (Acc)",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "IE000QL3QEM2",
+    "Name": "Global Government Bond EUR (Acc)",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "IE000V6KDJC9",
+    "Name": "MSCI World Selection EUR Hedged (Dist)",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "IE000YUU9UG5",
+    "Name": "China Government Local Bond EUR (Acc)",
+    "date": "2025-09-25"
+  },
+  {
     "ISIN": "GB00B1XZS820",
     "Name": "Anglo American",
     "date": "2025-09-24"

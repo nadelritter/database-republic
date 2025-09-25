@@ -1,5 +1,35 @@
 [
   {
+    "ISIN": "GB00B1XZS820",
+    "Name": "Anglo American",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "KYG9845F2080",
+    "Name": "LakeShore Biopharma",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "SE0014855292",
+    "Name": "Readly International",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "US56804T3041",
+    "Name": "Marin Software",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "US67075A1060",
+    "Name": "Nuveen Preferred Securities & Income Opportunities Fund",
+    "date": "2025-09-25"
+  },
+  {
+    "ISIN": "US8472151005",
+    "Name": "SpartanNash",
+    "date": "2025-09-25"
+  },
+  {
     "ISIN": "CA28619K2083",
     "Name": "Elemental Altus Royalties Corp Registered Shares o.N.",
     "date": "2025-09-24"
