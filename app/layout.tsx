@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Suspense } from "react"
 import "./globals.css"
 
-// Trigger redeployment - auto-detect build output fix
+// Trigger redeployment - Cloudflare Pages optimization
 export const metadata: Metadata = {
   title: "Republic Database",
   description: "Database aller deutschen Aktien und Finanzinstrumente",
