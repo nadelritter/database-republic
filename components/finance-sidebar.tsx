@@ -77,7 +77,7 @@ export function FinanceSidebar() {
   }
 
   const [hoveredValue, setHoveredValue] = useState<number | null>(null)
-  const [selectedTimespan, setSelectedTimespan] = useState("1D")
+  const [selectedTimespan, setSelectedTimespan] = useState("YTD")
   const [isLoadingSP500, setIsLoadingSP500] = useState(false)
   const [isLoadingReddit, setIsLoadingReddit] = useState(true)
 
