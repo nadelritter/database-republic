@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
           <div>
             <h2 className="text-2xl font-semibold mb-6 text-foreground">1. General Information</h2>
             <p className="mb-6">
-              This Privacy Policy explains how [Your Name/Company] (referred to as "we," "us," or "our") collects, processes, and protects personal data when you use this website.
+              This Privacy Policy explains how we collect, process, and protect personal data when you use this website.
             </p>
             <p className="mb-6">
               We are committed to protecting your privacy and complying with the EU General Data Protection Regulation (GDPR) and the German Federal Data Protection Act (BDSG). Please read this policy carefully to understand your rights and how we handle your data.
@@ -28,9 +28,9 @@ export default function PrivacyPolicy() {
           <div>
             <h2 className="text-2xl font-semibold mb-6 text-foreground">2. Data Controller</h2>
             <p className="mb-6">
-              [Your Name/Company]<br />
-              [Your Full Address]<br />
-              Email: [your-email@domain.com]
+              Maximilian Freitag<br />
+              Wagnerstr. 39, 44532 Lünen<br />
+              Email: 68cent@mail.de
             </p>
           </div>
 
@@ -97,7 +97,7 @@ export default function PrivacyPolicy() {
               <li>Withdraw consent at any time (without affecting the lawfulness of earlier processing)</li>
             </ul>
             <p className="mb-6">
-              To exercise your rights, contact us at [your-email@domain.com].
+              To exercise your rights, contact us at 68cent@mail.de.
             </p>
           </div>
 

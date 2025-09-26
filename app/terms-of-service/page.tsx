@@ -72,7 +72,7 @@ export default function TermsOfService() {
           <div>
             <h2 className="text-2xl font-semibold mb-6 text-foreground">8. Governing Law and Jurisdiction</h2>
             <p className="mb-6">
-              These Terms shall be governed by and construed in accordance with the laws of Germany. Any disputes arising shall be subject to the exclusive jurisdiction of the courts in [Your City].
+              These Terms shall be governed by and construed in accordance with the laws of Germany. Any disputes arising shall be subject to the exclusive jurisdiction of the courts in Lünen.
             </p>
           </div>
 
@@ -80,8 +80,9 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-semibold mb-6 text-foreground">9. Contact Information</h2>
             <p className="mb-6">
               For questions about these Terms, please contact:<br />
-              [Your Name/Company]<br />
-              Email: [your-email@domain.com]
+              Maximilian Freitag<br />
+              Wagnerstr. 39, 44532 Lünen<br />
+              Email: 68cent@mail.de
             </p>
           </div>
 
