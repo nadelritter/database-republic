@@ -1,7 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server"
-import { readFileSync, writeFileSync, existsSync } from 'fs'
-import { join } from 'path'
-import { parse } from 'csv-parse/sync'
+import { stockData } from "@/lib/stock-data"
 
 interface Stock {
   id: number
@@ -15,84 +13,14 @@ interface Stock {
 // Cache for parsed data
 let cachedStocks: Stock[] | null = null
 
-// Path to store stock state
-const STOCK_STATE_PATH = join(process.cwd(), 'data', 'stock-state.json')
-
-function loadStockState(): Stock[] {
-  try {
-    if (existsSync(STOCK_STATE_PATH)) {
-      const data = readFileSync(STOCK_STATE_PATH, 'utf-8')
-      return JSON.parse(data)
-    }
-  } catch (error) {
-    console.error('Error loading stock state:', error)
-  }
-  return []
-}
-
-function saveStockState(stocks: Stock[]): void {
-  try {
-    writeFileSync(STOCK_STATE_PATH, JSON.stringify(stocks, null, 2))
-  } catch (error) {
-    console.error('Error saving stock state:', error)
-  }
-}
-
 function getStocks(): Stock[] {
   if (cachedStocks) {
     return cachedStocks
   }
 
-  try {
-    // Read the CSV file
-    const csvPath = join(process.cwd(), 'data', 'trade_republic_aktien_25_09_25.csv')
-    const csvContent = readFileSync(csvPath, 'utf-8')
-
-    // Parse CSV
-    const records = parse(csvContent, {
-      columns: true,
-      skip_empty_lines: true,
-      trim: true,
-    })
-
-    // Load previous state
-    const previousStocks = loadStockState()
-    const previousStockMap = new Map(previousStocks.map(stock => [stock.isin, stock]))
-
-    // Create new stocks from CSV
-    const newStocks: Stock[] = records.map((record: any, index: number) => {
-      const isin = record.ISIN || record.isin || ''
-      const name = record.Name || record.name || ''
-      const existingStock = previousStockMap.get(isin)
-
-      return {
-        id: index + 1,
-        name,
-        isin,
-        image: '/placeholder.svg',
-        added: existingStock ? existingStock.added : new Date().toISOString().split('T')[0],
-        removed: false, // Current stocks in CSV are not removed
-      }
-    })
-
-    // Mark stocks that were in previous state but not in new CSV as removed
-    const currentISINs = new Set(newStocks.map(stock => stock.isin))
-    const removedStocks = previousStocks
-      .filter(stock => !currentISINs.has(stock.isin))
-      .map(stock => ({ ...stock, removed: true }))
-
-    // Combine current and removed stocks
-    cachedStocks = [...newStocks, ...removedStocks]
-
-    // Save the new state
-    saveStockState(cachedStocks)
-
-    return cachedStocks
-  } catch (error) {
-    console.error('Error reading CSV file:', error)
-    // Fallback to empty array
-    return []
-  }
+  // Use the static stock data
+  cachedStocks = stockData
+  return cachedStocks
 }
 
 export async function GET(request: NextRequest) {
