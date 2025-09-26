@@ -76,7 +76,12 @@ def main():
         new_added_list = added.to_dict('records')
         for item in new_added_list: item['date'] = today_str
 
-        with open(ADDED_JSON, 'r') as f: existing_added = json.load(f)
+        # Load existing added stocks or create empty list
+        try:
+            with open(ADDED_JSON, 'r') as f: existing_added = json.load(f)
+        except FileNotFoundError:
+            existing_added = []
+
         updated_added = new_added_list + existing_added
         with open(ADDED_JSON, 'w') as f: json.dump(updated_added, f, indent=2)
 
@@ -86,7 +91,12 @@ def main():
         new_removed_list = removed.to_dict('records')
         for item in new_removed_list: item['date'] = today_str
 
-        with open(REMOVED_JSON, 'r') as f: existing_removed = json.load(f)
+        # Load existing removed stocks or create empty list
+        try:
+            with open(REMOVED_JSON, 'r') as f: existing_removed = json.load(f)
+        except FileNotFoundError:
+            existing_removed = []
+
         updated_removed = new_removed_list + existing_removed
         with open(REMOVED_JSON, 'w') as f: json.dump(updated_removed, f, indent=2)
 
