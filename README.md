@@ -11,7 +11,8 @@
 A live, automated dashboard that monitors the official Trade Republic instrument list, providing a clear view of all securities that are added or removed from the platform.
 
 
-*(Hint: Replace this line with a screenshot of your finished website!)*
+![Screenshot_2025-09-24_161619](https://github.com/user-attachments/assets/364fc0e7-1a6e-4608-969c-91905e10c7b2)
+
 
 ---
 
