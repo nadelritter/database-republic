@@ -161,4 +161,4 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export const runtime = 'edge';
+// Note: Not using edge runtime due to file system operations
