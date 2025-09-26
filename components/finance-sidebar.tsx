@@ -7,7 +7,7 @@ interface SP500Data {
   price: number
   change: number
   changePercent: number
-  history: Array<{ time: string; value: number; date: Date }>
+  history: Array<{ time: string; value: number; date: string }>
 }
 
 interface RedditPost {
@@ -16,95 +16,86 @@ interface RedditPost {
   score: number
   url: string
   created: number
+  permalink: string
 }
 
 export function FinanceSidebar() {
-  const generateHistoricalData = (years: number) => {
-    const data = []
-    const now = new Date()
-    const startDate = new Date(now.getTime() - years * 365 * 24 * 60 * 60 * 1000)
-
-    // Start at a base price 2 years ago
-    let currentPrice = 4200
-
-    // Generate daily data points for 2 years
-    for (let i = 0; i < years * 365; i++) {
-      const date = new Date(startDate.getTime() + i * 24 * 60 * 60 * 1000)
-
-      // Simulate realistic market movements with overall upward trend
-      const dailyChange = (Math.random() - 0.45) * 50 // Slight upward bias
-      currentPrice += dailyChange
-
-      // Ensure price stays in realistic range
-      currentPrice = Math.max(3800, Math.min(6200, currentPrice))
-
-      data.push({
-        time: date.toISOString().split("T")[0],
-        value: currentPrice,
-        date: date,
-      })
-    }
-
-    return data
-  }
-
-  const [sp500Data, setSP500Data] = useState<SP500Data>(() => {
-    const history = generateHistoricalData(2)
-    const latestPrice = history[history.length - 1].value
-
-    return {
-      price: latestPrice,
-      change: 23.35,
-      changePercent: 0.41,
-      history: history,
-    }
+  const [sp500Data, setSP500Data] = useState<SP500Data>({
+    price: 4200,
+    change: 23.35,
+    changePercent: 0.41,
+    history: [],
   })
 
   const [finanzenPost, setFinanzenPost] = useState<RedditPost>({
-    title: "ETF-Sparplan: Welcher Broker ist 2024 am günstigsten?",
-    author: "u/FinanzGuru2024",
-    score: 342,
+    title: "Loading...",
+    author: "u/loading",
+    score: 0,
     url: "#",
-    created: Date.now() - 3600000,
+    created: Date.now(),
+    permalink: "",
   })
 
   const [mauerstrassenPost, setMauerstrassenPost] = useState<RedditPost>({
-    title: "🚀 NVIDIA calls drucken wieder - wer ist dabei? 💎🙌",
-    author: "u/DiamantHände",
-    score: 1247,
+    title: "Loading...",
+    author: "u/loading",
+    score: 0,
     url: "#",
-    created: Date.now() - 7200000,
+    created: Date.now(),
+    permalink: "",
   })
 
   const [hoveredValue, setHoveredValue] = useState<number | null>(null)
   const [selectedTimespan, setSelectedTimespan] = useState("1D")
+  const [isLoadingSP500, setIsLoadingSP500] = useState(false)
+  const [isLoadingReddit, setIsLoadingReddit] = useState(true)
 
-  // Simulate live SP500 updates
+  // Fetch SP500 data when timespan changes
   useEffect(() => {
-    const interval = setInterval(() => {
-      setSP500Data((prev) => {
-        const newPrice = prev.price + (Math.random() - 0.5) * 2
-        const now = new Date()
-
-        const newHistory = [
-          ...prev.history.slice(1),
-          {
-            time: now.toISOString().split("T")[0],
-            value: newPrice,
-            date: now,
-          },
-        ]
-
-        return {
-          price: newPrice,
-          change: prev.change + (Math.random() - 0.5) * 0.5,
-          changePercent: prev.changePercent + (Math.random() - 0.5) * 0.1,
-          history: newHistory,
+    async function fetchSP500Data() {
+      setIsLoadingSP500(true)
+      try {
+        const response = await fetch(`/api/sp500?timespan=${selectedTimespan}`)
+        if (response.ok) {
+          const data = await response.json()
+          setSP500Data(data)
         }
-      })
-    }, 10000) // Updated interval from 5000ms to 10000ms (10 seconds)
+      } catch (error) {
+        console.error('Error fetching SP500 data:', error)
+      } finally {
+        setIsLoadingSP500(false)
+      }
+    }
 
-    return () => clearInterval(interval)
+    fetchSP500Data()
+  }, [selectedTimespan])
+
+  // Fetch Reddit posts on component mount
+  useEffect(() => {
+    async function fetchRedditPosts() {
+      setIsLoadingReddit(true)
+      try {
+        // Fetch r/finanzen top post
+        const finanzenResponse = await fetch('/api/reddit?subreddit=finanzen')
+        if (finanzenResponse.ok) {
+          const finanzenData = await finanzenResponse.json()
+          setFinanzenPost(finanzenData)
+        }
+
+        // Fetch r/mauerstrassenwetten top post
+        const mauerstrassenResponse = await fetch('/api/reddit?subreddit=mauerstrassenwetten')
+        if (mauerstrassenResponse.ok) {
+          const mauerstrassenData = await mauerstrassenResponse.json()
+          setMauerstrassenPost(mauerstrassenData)
+        }
+      } catch (error) {
+        console.error('Error fetching Reddit posts:', error)
+      } finally {
+        setIsLoadingReddit(false)
+      }
+    }
+
+    fetchRedditPosts()
   }, [])
 
   const formatTime = (timestamp: number) => {
@@ -263,42 +254,62 @@ export function FinanceSidebar() {
         {/* r/finanzen post */}
         <div>
           <h4 className="font-medium mb-3 text-sm text-muted-foreground">r/finanzen - Top Post</h4>
-          <a href="https://reddit.com/r/finanzen" target="_blank" rel="noopener noreferrer" className="block">
-            <div className="bg-muted/50 rounded-lg p-3 space-y-2 hover:bg-muted/70 transition-colors cursor-pointer">
-              <h5 className="font-medium text-sm leading-tight">{finanzenPost.title}</h5>
-              <div className="flex items-center justify-between text-xs text-muted-foreground">
-                <span>{finanzenPost.author}</span>
-                <span>{formatTime(finanzenPost.created)}</span>
-              </div>
+          {isLoadingReddit ? (
+            <div className="bg-muted/50 rounded-lg p-3 space-y-2">
+              <div className="h-4 bg-muted rounded animate-pulse"></div>
               <div className="flex items-center justify-between">
-                <span className="text-xs text-green-500">↑ {finanzenPost.score}</span>
-                <ExternalLink className="w-3 h-3 text-muted-foreground" />
+                <div className="h-3 bg-muted rounded w-16 animate-pulse"></div>
+                <div className="h-3 bg-muted rounded w-12 animate-pulse"></div>
               </div>
             </div>
-          </a>
+          ) : (
+            <a href={finanzenPost.url} target="_blank" rel="noopener noreferrer" className="block">
+              <div className="bg-muted/50 rounded-lg p-3 space-y-2 hover:bg-muted/70 transition-colors cursor-pointer">
+                <h5 className="font-medium text-sm leading-tight">{finanzenPost.title}</h5>
+                <div className="flex items-center justify-between text-xs text-muted-foreground">
+                  <span>{finanzenPost.author}</span>
+                  <span>{formatTime(finanzenPost.created)}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-green-500">↑ {finanzenPost.score}</span>
+                  <ExternalLink className="w-3 h-3 text-muted-foreground" />
+                </div>
+              </div>
+            </a>
+          )}
         </div>
 
         {/* r/mauerstrassenwetten post */}
         <div>
           <h4 className="font-medium mb-3 text-sm text-muted-foreground">r/mauerstrassenwetten - Top Post</h4>
-          <a
-            href="https://reddit.com/r/mauerstrassenwetten"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <div className="bg-muted/50 rounded-lg p-3 space-y-2 hover:bg-muted/70 transition-colors cursor-pointer">
-              <h5 className="font-medium text-sm leading-tight">{mauerstrassenPost.title}</h5>
-              <div className="flex items-center justify-between text-xs text-muted-foreground">
-                <span>{mauerstrassenPost.author}</span>
-                <span>{formatTime(mauerstrassenPost.created)}</span>
-              </div>
+          {isLoadingReddit ? (
+            <div className="bg-muted/50 rounded-lg p-3 space-y-2">
+              <div className="h-4 bg-muted rounded animate-pulse"></div>
               <div className="flex items-center justify-between">
-                <span className="text-xs text-green-500">↑ {mauerstrassenPost.score}</span>
-                <ExternalLink className="w-3 h-3 text-muted-foreground" />
+                <div className="h-3 bg-muted rounded w-16 animate-pulse"></div>
+                <div className="h-3 bg-muted rounded w-12 animate-pulse"></div>
               </div>
             </div>
-          </a>
+          ) : (
+            <a
+              href={mauerstrassenPost.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <div className="bg-muted/50 rounded-lg p-3 space-y-2 hover:bg-muted/70 transition-colors cursor-pointer">
+                <h5 className="font-medium text-sm leading-tight">{mauerstrassenPost.title}</h5>
+                <div className="flex items-center justify-between text-xs text-muted-foreground">
+                  <span>{mauerstrassenPost.author}</span>
+                  <span>{formatTime(mauerstrassenPost.created)}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-green-500">↑ {mauerstrassenPost.score}</span>
+                  <ExternalLink className="w-3 h-3 text-muted-foreground" />
+                </div>
+              </div>
+            </a>
+          )}
         </div>
       </div>
     </div>

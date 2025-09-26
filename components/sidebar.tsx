@@ -17,7 +17,7 @@ export function Sidebar() {
     <div className="w-52 bg-sidebar border-r border-sidebar-border p-4 h-screen overflow-y-auto flex flex-col">
       <div className="flex items-center gap-3 mb-8">
         <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
-          <Image src="/database-logo.webp" alt="Database Logo" width={48} height={48} className="w-12 h-12" />
+          <Image src="/database-logo.webp" alt="Database Logo" width={48} height={48} className="w-12 h-12 rounded-full" />
         </div>
         <div className="text-left">
           <div className="font-bold text-sm leading-tight">REPUBLIC</div>

@@ -8,7 +8,7 @@ from datetime import date
 PDF_URL = "https://assets.traderepublic.com/assets/files/DE/Instrument_Universe_DE_en.pdf"
 DATA_DIR = "data"
 PDF_FILENAME = os.path.join(DATA_DIR, "Instrument_Universe.pdf")
-MASTER_CSV = os.path.join(DATA_DIR, "instrument_universe.csv")
+MASTER_CSV = os.path.join(DATA_DIR, "trade_republic_aktien_25_09_25.csv")
 ADDED_JSON = os.path.join(DATA_DIR, "added.json")
 REMOVED_JSON = os.path.join(DATA_DIR, "removed.json")
 
@@ -17,9 +17,9 @@ def download_pdf(url, filename):
     if response.status_code == 200:
         with open(filename, "wb") as file:
             file.write(response.content)
-        print("? PDF downloaded successfully.")
+        print("✓ PDF downloaded successfully.")
         return True
-    print(f"? Failed to download PDF. Status: {response.status_code}")
+    print(f"✗ Failed to download PDF. Status: {response.status_code}")
     return False
 
 def extract_data_from_pdf(pdf_filename):
@@ -55,33 +55,33 @@ def main():
         new_df.to_csv(MASTER_CSV, index=False)
         with open(ADDED_JSON, 'w') as f: json.dump([], f)
         with open(REMOVED_JSON, 'w') as f: json.dump([], f)
-        print("? Master file created. No previous data to compare.")
+        print("✓ Master file created. No previous data to compare.")
         return
 
     old_df = pd.read_csv(MASTER_CSV)
     old_df['ISIN'] = old_df['ISIN'].str.strip().str.upper()
-    
+
     added = new_df[~new_df['ISIN'].isin(old_df['ISIN'])]
     removed = old_df[~old_df['ISIN'].isin(new_df['ISIN'])]
 
     if added.empty and removed.empty:
-        print("? No changes found.")
+        print("✓ No changes found.")
         return
 
     today_str = date.today().strftime('%Y-%m-%d')
 
     if not added.empty:
-        print(f"\n? Added stocks ({len(added)}):")
+        print(f"\n✓ Added stocks ({len(added)}):")
         print(added)
         new_added_list = added.to_dict('records')
         for item in new_added_list: item['date'] = today_str
-        
+
         with open(ADDED_JSON, 'r') as f: existing_added = json.load(f)
         updated_added = new_added_list + existing_added
         with open(ADDED_JSON, 'w') as f: json.dump(updated_added, f, indent=2)
 
     if not removed.empty:
-        print(f"\n? Removed stocks ({len(removed)}):")
+        print(f"\n✓ Removed stocks ({len(removed)}):")
         print(removed)
         new_removed_list = removed.to_dict('records')
         for item in new_removed_list: item['date'] = today_str
@@ -91,7 +91,7 @@ def main():
         with open(REMOVED_JSON, 'w') as f: json.dump(updated_removed, f, indent=2)
 
     new_df.to_csv(MASTER_CSV, index=False)
-    print("\n? Master file and JSON logs have been updated.")
+    print("\n✓ Master file and JSON logs have been updated.")
 
 if __name__ == "__main__":
     main()

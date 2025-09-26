@@ -5,7 +5,17 @@ import { FinanceSidebar } from "@/components/finance-sidebar"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Plus, ThumbsUp } from "lucide-react"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+
+interface Stock {
+  id: number
+  name: string
+  isin: string
+  image: string
+  added: string
+  removed: boolean
+  description?: string
+}
 
 interface PageProps {
   params: {
@@ -13,113 +23,48 @@ interface PageProps {
   }
 }
 
-const emotes = [
-  {
-    id: 1,
-    name: "NVIDIA",
-    image: "/nvidia-logo.png",
-    added: "2025-09-15",
-    removed: true,
-    isin: "US67066G1040",
-    description:
-      "NVIDIA Corporation ist ein amerikanisches multinationales Technologieunternehmen mit Sitz in Santa Clara, Kalifornien. Das Unternehmen entwirft Grafikprozessoren (GPUs) für Gaming- und professionelle Märkte sowie System-on-a-Chip-Einheiten (SoCs) für mobile Computer- und Automobilmärkte.",
-  },
-  {
-    id: 2,
-    name: "Tesla",
-    image: "/tesla-logo.png",
-    added: "2025-09-15",
-    removed: false,
-    isin: "US88160R1014",
-    description:
-      "Tesla, Inc. ist ein amerikanisches Elektrofahrzeug- und Clean-Energy-Unternehmen mit Sitz in Austin, Texas. Tesla entwirft und fertigt Elektrofahrzeuge, Energiespeichersysteme, Solarmodule und verwandte Produkte und Dienstleistungen.",
-  },
-  {
-    id: 3,
-    name: "Apple",
-    image: "/apple-logo.png",
-    added: "2025-09-04",
-    removed: false,
-    isin: "US0378331005",
-    description:
-      "Apple Inc. ist ein amerikanisches multinationales Technologieunternehmen mit Hauptsitz in Cupertino, Kalifornien. Apple entwirft, entwickelt und verkauft Unterhaltungselektronik, Computersoftware und Online-Dienste.",
-  },
-  {
-    id: 4,
-    name: "Microsoft",
-    image: "/microsoft-logo.png",
-    added: "2025-09-01",
-    removed: true,
-    isin: "US5949181045",
-    description:
-      "Microsoft Corporation ist ein amerikanisches multinationales Technologieunternehmen mit Hauptsitz in Redmond, Washington. Microsoft entwickelt, fertigt, lizenziert, unterstützt und verkauft Computersoftware, Unterhaltungselektronik und Personal Computer.",
-  },
-  {
-    id: 5,
-    name: "Amazon",
-    image: "/amazon-logo.png",
-    added: "2025-09-01",
-    removed: false,
-    isin: "US0231351067",
-    description:
-      "Amazon.com, Inc. ist ein amerikanisches multinationales Technologieunternehmen mit Fokus auf E-Commerce, Cloud Computing, digitales Streaming und künstliche Intelligenz.",
-  },
-  {
-    id: 6,
-    name: "Google",
-    image: "/google-logo.png",
-    added: "2025-08-21",
-    removed: false,
-    isin: "US64110L1061",
-    description:
-      "Alphabet Inc. ist ein amerikanisches multinationales Technologie-Konglomerat-Holdinggesellschaft mit Hauptsitz in Mountain View, Kalifornien. Es wurde durch eine Umstrukturierung von Google am 2. Oktober 2015 gegründet.",
-  },
-  {
-    id: 7,
-    name: "Meta",
-    image: "/meta-logo-abstract.png",
-    added: "2025-08-15",
-    removed: true,
-    isin: "US30303M1027",
-    description:
-      "Meta Platforms, Inc., ehemals Facebook, Inc., ist ein amerikanisches multinationales Technologie-Konglomerat mit Sitz in Menlo Park, Kalifornien. Das Unternehmen besitzt und betreibt Facebook, Instagram, Threads und WhatsApp.",
-  },
-  {
-    id: 8,
-    name: "Netflix",
-    image: "/netflix-inspired-logo.png",
-    added: "2025-08-10",
-    removed: true,
-    isin: "US79466L3024",
-    description:
-      "Netflix, Inc. ist ein amerikanisches Mediendienstleistungsunternehmen und Produktionsunternehmen mit Hauptsitz in Los Gatos, Kalifornien. Netflix wurde 1997 von Reed Hastings und Marc Randolph in Scotts Valley, Kalifornien, gegründet.",
-  },
-  {
-    id: 9,
-    name: "Adobe",
-    image: "/adobe-logo.png",
-    added: "2025-08-05",
-    removed: true,
-    isin: "US00724F1012",
-    description:
-      "Adobe Inc., ursprünglich Adobe Systems Incorporated, ist ein amerikanisches multinationales Computersoftwareunternehmen mit Sitz in San Jose, Kalifornien.",
-  },
-  {
-    id: 10,
-    name: "Salesforce",
-    image: "/salesforce-logo.png",
-    added: "2025-08-05",
-    removed: true,
-    isin: "US79466L3024",
-    description:
-      "Salesforce, Inc. ist ein amerikanisches Cloud-basiertes Softwareunternehmen mit Hauptsitz in San Francisco, Kalifornien. Es bietet Customer-Relationship-Management-Software und Anwendungen mit Fokus auf Vertrieb, Kundenservice, Marketing-Automatisierung, E-Commerce, Analytik und Anwendungsentwicklung.",
-  },
-]
-
 export default function AktiePage({ params }: PageProps) {
-  const aktie = emotes.find((emote) => emote.id === Number.parseInt(params.id))
+  const [aktie, setAktie] = useState<Stock | null>(null)
+  const [loading, setLoading] = useState(true)
   const [voteCount, setVoteCount] = useState(1)
   const [hasVoted, setHasVoted] = useState(false)
+
+  useEffect(() => {
+    async function fetchStock() {
+      try {
+        const response = await fetch('/api/stocks', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ id: Number.parseInt(params.id) }),
+        })
+
+        if (response.ok) {
+          const stockData = await response.json()
+          setAktie(stockData)
+        } else {
+          console.error('Failed to fetch stock')
+        }
+      } catch (error) {
+        console.error('Error fetching stock:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchStock()
+  }, [params.id])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-sm text-muted-foreground">Loading stock...</div>
+        </div>
+      </div>
+    )
+  }
 
   if (!aktie) {
     return (
