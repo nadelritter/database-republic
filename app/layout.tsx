@@ -4,7 +4,7 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "TradeRepublic Aktien - REPUBLIC DATABASE",
+  title: "Republic Database",
   description: "Database aller deutschen Aktien und Finanzinstrumente",
   generator: "v0.app",
 }
