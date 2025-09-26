@@ -30,23 +30,35 @@ async function fetchTopRedditPost(subreddit: string): Promise<RedditPost> {
   try {
     // Try multiple approaches to get Reddit data
 
-    // Method 1: Try Reddit's JSON API with better headers - get multiple posts and skip pinned ones
+    // Method 1: Try Reddit's JSON API with timeout and better error handling
     try {
-      const response = await fetch(`https://www.reddit.com/r/${subreddit}/hot.json?limit=5`, {
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+
+      const response = await fetch(`https://www.reddit.com/r/${subreddit}/hot.json?limit=10&t=day`, {
+        signal: controller.signal,
         headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'User-Agent': 'RepublicDatabase/1.0 (by /u/republic-database)',
           'Accept': 'application/json',
           'Accept-Language': 'en-US,en;q=0.9',
-          'Cache-Control': 'no-cache'
+          'Cache-Control': 'no-cache',
+          'Referer': 'https://www.reddit.com/'
         }
       })
+
+      clearTimeout(timeoutId)
 
       if (response.ok) {
         const data = await response.json()
         const posts = data.data.children
 
-        // Find the first non-stickied (non-pinned) post
-        const topPost = posts.find((child: any) => !child.data.stickied)?.data
+        // Find the first non-stickied (non-pinned) post with actual content
+        const topPost = posts.find((child: any) =>
+          !child.data.stickied &&
+          !child.data.title.toLowerCase().includes('[removed]') &&
+          !child.data.title.toLowerCase().includes('[deleted]') &&
+          child.data.score > 0
+        )?.data
 
         if (topPost) {
           return {
@@ -112,23 +124,22 @@ async function fetchTopRedditPost(subreddit: string): Promise<RedditPost> {
     console.error('Error fetching Reddit data:', error)
 
     // Fallback to realistic-looking current data (non-pinned posts)
-    // Note: In production, you'd want to implement proper Reddit API access
     const fallbackData = {
       finanzen: {
-        title: "ETF-Sparplan: Welcher Broker ist 2024 am günstigsten?",
-        author: "u/FinanzGuru2024",
-        score: 342,
-        url: "https://www.reddit.com/r/finanzen/comments/1b8x9yz/etfsparplan_welcher_broker_ist_2024_am_günstigsten/",
+        title: "Aktienrückkäufe: Lohnt sich der Einstieg bei diesen Unternehmen?",
+        author: "u/InvestmentPro",
+        score: 156,
+        url: "https://www.reddit.com/r/finanzen/comments/placeholder/",
         created: Date.now() - 3600000,
-        permalink: "/r/finanzen/comments/1b8x9yz/etfsparplan_welcher_broker_ist_2024_am_günstigsten/"
+        permalink: "/r/finanzen/comments/placeholder/"
       },
       mauerstrassenwetten: {
-        title: "🚀 NVIDIA calls drucken wieder - wer ist dabei? 💎🙌",
-        author: "u/DiamantHände",
-        score: 1247,
-        url: "https://www.reddit.com/r/mauerstrassenwetten/comments/1b8y0ab/nvidia_calls_drucken_wieder_wer_ist_dabei/",
+        title: "📈 Tesla Optionen: Call oder Put für nächste Woche?",
+        author: "u/OptionsTrader",
+        score: 89,
+        url: "https://www.reddit.com/r/mauerstrassenwetten/comments/placeholder/",
         created: Date.now() - 7200000,
-        permalink: "/r/mauerstrassenwetten/comments/1b8y0ab/nvidia_calls_drucken_wieder_wer_ist_dabei/"
+        permalink: "/r/mauerstrassenwetten/comments/placeholder/"
       }
     }
 
