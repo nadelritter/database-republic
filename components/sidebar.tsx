@@ -1,11 +1,9 @@
-import { Home, Users, FileText, Scale } from "lucide-react"
+import { Home, FileText, Scale } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 
-const navigationItems = [{ icon: Home, label: "Home", active: true, href: "/" }]
-
-const aktienItems = [{ icon: Users, label: "Trade Republic", active: false, href: "#" }]
+const navigationItems = [{ icon: Home, label: "Trade Republic", active: true, href: "/" }]
 
 const legalItems = [
   { icon: FileText, label: "Privacy Policy", active: false, href: "/privacy-policy" },
@@ -27,19 +25,8 @@ export function Sidebar() {
 
       <nav className="space-y-6 flex-1">
         <div>
-          {navigationItems.map((item) => (
-            <Link key={item.label} href={item.href}>
-              <Button variant={item.active ? "secondary" : "ghost"} className="w-full justify-start mb-1">
-                <item.icon className="w-4 h-4 mr-3" />
-                {item.label}
-              </Button>
-            </Link>
-          ))}
-        </div>
-
-        <div>
           <h3 className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-wider">NEOBROKER</h3>
-          {aktienItems.map((item) => (
+          {navigationItems.map((item) => (
             <Link key={item.label} href={item.href}>
               <Button variant={item.active ? "secondary" : "ghost"} className="w-full justify-start mb-1">
                 <item.icon className="w-4 h-4 mr-3" />

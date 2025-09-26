@@ -3,9 +3,48 @@
 import { Sidebar } from "@/components/sidebar"
 import { FinanceSidebar } from "@/components/finance-sidebar"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Plus, ThumbsUp } from "lucide-react"
+import { ArrowLeft, ThumbsUp } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+
+function LogoImage({ isin, name, className }: { isin: string; name: string; className?: string }) {
+  const [imageError, setImageError] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(false)
+
+  const logoUrl = `https://assets.extraetf.com/investment-icon/${isin}`
+
+  if (imageError) {
+    return (
+      <img
+        src="/placeholder-stocks.png"
+        alt={`${name} Logo`}
+        className={className}
+        onLoad={() => setImageLoaded(true)}
+      />
+    )
+  }
+
+  return (
+    <>
+      <img
+        src={logoUrl}
+        alt={`${name} Logo`}
+        className={className}
+        onLoad={() => setImageLoaded(true)}
+        onError={() => setImageError(true)}
+        style={{ display: imageLoaded ? 'block' : 'none' }}
+      />
+      {!imageLoaded && !imageError && (
+        <img
+          src="/placeholder-stocks.png"
+          alt={`${name} Logo`}
+          className={className}
+          style={{ display: 'block' }}
+        />
+      )}
+    </>
+  )
+}
 
 interface Stock {
   id: number
@@ -125,9 +164,9 @@ export default function AktiePage({ params }: PageProps) {
                   <div className="flex justify-center">
                     <div className="text-center">
                       <div className="w-16 h-16 bg-muted rounded-lg flex items-center justify-center mb-2 mx-auto">
-                        <img
-                          src={aktie.image || "/placeholder.svg"}
-                          alt={`${aktie.name} Logo`}
+                        <LogoImage
+                          isin={aktie.isin}
+                          name={aktie.name}
                           className="w-full h-full object-cover rounded-lg"
                         />
                       </div>
@@ -154,11 +193,8 @@ export default function AktiePage({ params }: PageProps) {
               {/* Right Column - Details */}
               <div className="lg:col-span-2">
                 <div className="bg-card rounded-lg p-6">
-                  <div className="flex items-center justify-between mb-6">
+                  <div className="mb-6">
                     <h2 className="text-lg font-semibold">Info zu {aktie.name}</h2>
-                    <Button variant="ghost" size="sm">
-                      <Plus className="w-4 h-4" />
-                    </Button>
                   </div>
 
                   <div className="mb-6">
