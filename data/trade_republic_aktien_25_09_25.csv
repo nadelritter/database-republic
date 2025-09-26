@@ -1210,6 +1210,7 @@ CA25703L1004,Doman Building Materials
 CA2574141024,Dominion Lending Centres
 CA25822C2058,Dorel Industries
 CA25862T1003,Doubleview Gold Corp. Registered Shares o.N.
+CA26139R1091,DPM Metals Inc. Registered Shares o.N.
 CA26142Q3044,Draganfly
 CA26153M5072,Dream Unlimited
 CA26153W1095,Dream Industrial Real Estate Investment Trust
@@ -1473,6 +1474,7 @@ CA4234071054,HELLO PAL INTERN. INC.
 CA4236301020,Hemisphere Energy
 CA4236943060,Hemostemix
 CA4270861038,Hercules Metals
+CA42804X3058,Hertz Energy Inc. Registered Shares o.N.
 CA42841L2075,Hi-View Resources Inc. Registered Shares o.N.
 CA4296951094,High Liner Foods
 CA42981E4013,High Tide
@@ -2514,6 +2516,7 @@ CH1403212751,"Lithium Argentina AG Namens-Aktien DL-,01"
 CH1425684714,"Aryzta AG Namens-Aktien SF -,80"
 CH1429326825,"Siegfried Holding AG Nam.Akt. SF 0,72"
 CH1430134226,Amrize AG Namens-Aktien DL 1000
+CH1484953687,SMG Swiss Marketplace Group Holding
 CNE1000000V6,Launch Tech
 CNE1000000W4,Shanghai Fudan-Zhangjiang
 CNE100000114,China Molybdenum
@@ -3647,7 +3650,6 @@ FR0000061608,Piscines Desjoyaux
 FR0000061780,Augros Cosmetics
 FR0000062101,Fermière du Casino
 FR0000062150,Bleecker
-FR0000062184,IDSud
 FR0000062234,Financiere de l'Odet
 FR0000062465,Alan Allman Associates
 FR0000062671,Exail Technologies
@@ -4722,6 +4724,7 @@ GRS470003013,Piraeus Port Authority
 GRS472003011,Profile Systems & Software
 GRS473003002,Revoil
 GRS474003001,I. Kloukinas - I. Lappas
+GRS475003018,"Ilyda S.A. Namens-Aktien EO -,45"
 GRS477003008,Elinoil
 GRS484003009,Sidma Steel
 GRS487003006,Trastor Real Estate Investment Company
@@ -5473,7 +5476,6 @@ JP3397200001,Suzuki Motor
 JP3399310006,ZOZO
 JP3399720006,Stella Chemifa
 JP3400400002,SCSK
-JP3400650002,SBI Sumishin Net Bank
 JP3400900001,Sumitomo Osaka Cement
 JP3401400001,Sumitomo Chemical
 JP3402600005,Sumitomo Metal Mining
@@ -6777,6 +6779,7 @@ PTSNC0AM0006,Sonaecom
 PTSON0AM0001,Sonae
 PTVAA0AM0019,Vista Alegre Atlantis
 PTZON0AM0006,NOS SGPS
+SE0000101362,Bergman & Beving AB Namn-Aktier B (fria) SK 2
 SE0000106205,Peab
 SE0000106270,H&M
 SE0000107203,Industrivarden (C)
@@ -6941,6 +6944,7 @@ SE0015346135,Stillfront
 SE0015556873,Cheffelo
 SE0015658109,Epiroc (A)
 SE0015658117,Epiroc (B)
+SE0015671995,Hemnet Group AB
 SE0015811955,Investor AB
 SE0015811963,Investor Registered (B)
 SE0015812417,GARO AB
@@ -8372,6 +8376,7 @@ US37892C1062,Glimpse Group
 US3789735079,GlobalStar Inc. Registered Shares o.N.
 US3793782018,Global Net Lease
 US37940X1028,Global Payments
+US37954A3032,"Global Medical REIT Inc. Reg.Shares New DL-,001"
 US3795772082,Globus Medical
 US37959E1029,Globe Life
 US3802371076,GoDaddy
@@ -9059,6 +9064,7 @@ US64110W1027,NetEase (ADR)
 US64111Q1040,NETGEAR
 US64115T1043,NetScout Systems
 US64118P1093,Netlist
+US64119N6085,Netskope Inc. Registered Shares Class A o.N.
 US64119V3033,Netstreit
 US64121N1090,Network-1 Technologies
 US64125C1099,Neurocrine Biosciences
@@ -10498,7 +10504,6 @@ IE0002PG6CA6,Rare Earth & Strategic Metals USD (Acc)
 IE0002PGSLZ5,US Equity Enhanced Active EUR 1C (Acc)
 IE0002RPS3K2,Hydrogen USD (Acc)
 IE0002UMVXQ1,Us Research Enhanced Index Equity Sri Paris Aligned Active
-USD,(Dist)
 IE0002W8NB38,MSCI USA Swap USD (Acc)
 IE0002XFS025,Global Quality Value USD (Acc)
 IE0002Y8CX98,Europe Defence Ucits Eur (Acc)
@@ -10511,7 +10516,6 @@ IE0003B4BV34,MSCI USA Tech 125 ESG Universal USD (Acc)
 IE0003BJ2JS4,Uranium and Nuclear Energy USD (Acc)
 IE0003HUCA83,Global Government Bond USD - EUR Hedged (Dist)
 IE0003JSNHV9,Global Research Enhanced Index Equity Sri Paris Aligned
-Active,EUR (Acc)
 IE0003KQ8JX1,Active Us Growth USD (Dist)
 IE0003NQ0IY5,MSCI World Quality USD (Acc)
 IE0003RQ9F90,Nasdaq-100 USD ( Dis )
@@ -10558,7 +10562,6 @@ IE00061J0RC6,S&P Global Consumer Discretionary ESG EUR (Dist)
 IE00063FT9K6,Copper Miners USD (Acc)
 IE00063GNWK1,MSCI USA ESG Leaders USD (Acc)
 IE00069JGT58,Us Research Enhanced Index Equity Sri Paris Aligned Active
-USD,(Acc)
 IE0006B9CPY7,USD High Yield Bond Active CLASS USD (Dist)
 IE0006BDZN36,Eur Overnight Rate Sf EUR (Acc)
 IE0006D3PGW3,FTSE Emerging ex China USD (Acc)
@@ -10568,7 +10571,6 @@ IE0006FFX5U1,MSCI Innovation USD (Acc)
 IE0006FM6MI8,S&P Global Health Care ESG EUR (Acc)
 IE0006GNB732,ESG EUR High Yield Corporate Bond (Acc)
 IE0006HMLPV6,Us Research Enhanced Index Equity Sri Paris Aligned Active
-EUR,Hedged (Acc)
 IE0006K7DEL9,Sustainable Euro Green Corp 1-5 Year EUR (Acc)
 IE0006KNOFD1,Global HY Corp Bond Research Enhanced Pab EUR Hedged (Dist)
 IE0006LBEDV2,Corporate Bond ESG Multi-Factor EUR (Dist)
@@ -10578,7 +10580,6 @@ IE0006QCIHM0,Global Corp Bond Research Enhanced EUR (Acc)
 IE0006QX3Y11,Bloomberg Canada PAB EUR (Acc)
 IE0006S0EBF2,Vest Nasdaq-100® Moderate Buffer Class A USD (Acc)
 IE0006SEWKA2,Global Emerging Markets Research Enhanced Index Equity
-Active,EUR (Acc)
 IE0006UGU3X3,iBonds Dec 2027 USD (Dist)
 IE0006VDD4K1,FTSE All-World Hedged EUR (Acc)
 IE0006WOV4I9,S&P World Screened USD (Acc)
@@ -10653,7 +10654,6 @@ IE000APK27S2,Global Aggregate Bond ESG EUR (Acc)
 IE000AQ7A2X6,Global Aggregate Bond EUR (Acc)
 IE000ARLR807,Usd Hy Corp Bond Research Enhanced Pab USD (Dis)
 IE000AV35A01,Global Emerging Markets Research Enhanced Index Equity Sri
-Paris,Aligned Active EUR (Acc)
 IE000AWRDWI7,Chinext 50 (Acc)
 IE000AWT6D61,USD Short Duration Corp Bond (Acc)
 IE000AYJ75E5,BulletShares 2026 EUR Corporate Bond (Dist)
@@ -10673,7 +10673,6 @@ IE000BRM9046,Invesco USD (Acc)
 IE000BWITBP9,iBonds Dec 2026 USD (Acc)
 IE000BWKUES1,Clean Water USD (Acc)
 IE000BXC49I6,Global Research Enhanced Index Equity Sri Paris Aligned
-Active,USD (Acc)
 IE000BZ1HVL2,MSCI World EUR Hedged (Acc)
 IE000BZXJJ24,iBonds Dec 2030 USD (Dist)
 IE000C5Q64P6,Corporate Bond 2029 USD (Dist)
@@ -10747,7 +10746,6 @@ IE000FSN19U2,Amundi Prime USD (Acc)
 IE000FVQW7E7,Global Corporate Bond Esg Climate Transition USD (Dist)
 IE000FXHG8D6,US Treasury Bond 10+ Year USD EUR Hedged (Dist)
 IE000FYTRRJ6,Global Research Enhanced Index Equity Sri Paris Aligned
-Active,USD (Dist)
 IE000G0E83X3,AI Innovation Active USD (Acc)
 IE000G3A6RN7,Carbon Transition China Equity USD (Acc)
 IE000G4ONBO6,Global Government Bond Climate Aware Index EUR Hedged (Dist)
@@ -10782,7 +10780,6 @@ IE000I1D7D10,iBonds Dec 2027 USD (Acc)
 IE000I25S1V5,BulletShares 2030 EUR Corporate Bond (Acc)
 IE000I2WYEU9,iBonds Dec 2031 EUR (Dist)
 IE000I5MBLC4,US Research Enhanced Index Equity Sri Paris Aligned Active
-EUR,(Acc)
 IE000I660ZF8,iBonds Dec 2032 EUR (Acc)
 IE000I7E6HL0,Future Of European Defence USD (Acc)
 IE000I8IKC59,MSCI Japan ESG Climate Paris Aligned USD (Acc)
@@ -10857,21 +10854,18 @@ IE000M7V94E1,Uranium And Nuclear Technologies USD (Acc)
 IE000MCVFK47,Corporate Green Bond EUR
 IE000MDKBOB3,Vest U.S. Equity Buffer January Class A USD (Acc)
 IE000MINO564,ESG Emerging Markets Government Bond (USD) 0-5 Year EUR
-Hedged,(Acc)
 IE000MJIXFE0,MSCI North America ESG Climate Net Zero Ambition (Dist)
 IE000MKIH0W7,Us Quality Value USD (Acc)
 IE000MLMNYS0,S&P 500 Equal Weight USD (Acc)
 IE000MMRLY96,Big Tech Option Income USD (Dist)
 IE000MO2MB07,New Economy Real Estate USD (Acc)
 IE000MQ5XEW1,Multi-Strategy Enhanced Commodities ex-Agriculture &
-Livestock,USD (Acc)
 IE000MUAJIF4,Corporate Bond ESG Short Duration Multi-Factor EUR (Dist)
 IE000MWUQBJ0,Euro Stoxx 50 EUR (Acc)
 IE000MY0C911,Global Corporate Bond EUR (Acc)
 IE000MYCJA42,Amundi Msci North America Esg C (Acc)
 IE000N1ZEIG9,Net Zero Pathway ESG USD (Acc)
 IE000N42HDP2,Quantitative Strategies Global Equity Low Volatility Low
-Carbon,USD (Acc)
 IE000N5JOGS2,China Government Local Bond USD (Acc)
 IE000N6I8IU2,Nasdaq Equity Premium USD (Acc)
 IE000N9MLVT1,MSCI Europe Climate Transition EUR (Acc)
@@ -10900,7 +10894,6 @@ IE000ONQ3X90,Msci World 2C EUR Hedged (Acc)
 IE000OULL4R4,MSCI USA NSL USD (Acc)
 IE000OVF8Q66,Emerging Markets Equity Enhanced Active USD (Acc)
 IE000OYABFQ2,iShares VI plc - iShares Russell 2000 Swap UCITS ETF EUR
-Hedged,(Acc)
 IE000P0R7WK6,Sustainable Euro Green Sovereign EUR (Acc)
 IE000P16KP52,Nasdaq Cybersecurity Class C Hedged EUR (Acc)
 IE000P3D0W60,Renewable Energy USD (Acc)
@@ -10928,7 +10921,6 @@ IE000QL3QEM2,Global Government Bond EUR (Acc)
 IE000QLV3SY5,Emerging Markets Paris Aligned Climate USD (Acc)
 IE000QMIHY81,MSCI World EUR Hedged (Acc)
 IE000QOLLXO2,Europe Research Enhanced Index Equity SRI Paris Aligned
-Active,EUR (dist)
 IE000QOU09J7,China Large Cap USD (Acc)
 IE000QQ8Z0D8,MSCI USA ESG Climate Net Zero Ambition USD (Dist)
 IE000QRDCYW2,Saudi Arabia Aggregate Bond USD (Acc)
@@ -10995,7 +10987,6 @@ IE000UY6XF65,iBonds Dec 2034 EUR (Acc)
 IE000UYVEVN3,U.S. Mid Cap USD (Dis)
 IE000UZCJS58,World Net Zero Pathway Paris USD (Acc)
 IE000UZIKD07,Global Research Enhanced Index Equity Sri Paris Aligned
-Active,EUR Hedged (Acc)
 IE000UZZ5D45,MSCI World Small Cap ESG Broad Transition USD (Acc)
 IE000UZZ5SU2,Active Us Growth EUR Hedged (Acc)
 IE000V04SL39,MSCI USA High Dividend Yield ESG USD (Dist)
@@ -11046,7 +11037,6 @@ IE000XFXBGR0,MSCI USA Small Cap ESG Leaders USD (Acc)
 IE000XG0ZRI7,Global High Yield Corporate Bond USD (Acc)
 IE000XGNMWE1,Bloomberg Global Sustainable Aggregate 1-3 Yr Bond USD (Acc)
 IE000XIBT2R7,Quantitative Strategies Global Equity Low Volatility Low
-Carbon,EUR (Acc)
 IE000XL4IXU1,MSCI USA Ex Mega Cap USD (Acc)
 IE000XLJ2JQ9,S&P SmallCap 600 ESG USD (Dist)
 IE000XNILW20,Global Sustainable Equity - USD (Acc)
@@ -11508,7 +11498,6 @@ IE00BF3N7219,Fallen Angels High Yield Corp Bond EUR (Dist)
 IE00BF3NC260,Euro High Yield Corp Bond USD Hedged (Acc)
 IE00BF4G6Y48,Global Research Enhanced Index Equity ESG USD (Acc)
 IE00BF4G6Z54,Global Emerging Markets Research Enhanced Index Equity ESG
-USD,(Acc)
 IE00BF4G7076,US Research Enhanced Index Equity ESG USD (Acc)
 IE00BF4G7183,Europe Research Enhanced Index Equity ESG EUR (Acc)
 IE00BF4J0300,Bloomberg Commodity USD (Acc)
@@ -11896,7 +11885,6 @@ IE00BM8R0J59,NASDAQ 100 Covered Call USD (Dist)
 IE00BM8R0N95,Genomics & Biotechnology USD (Acc)
 IE00BM97MR69,US Treasuries Ultrashort Bond USD (Acc)
 IE00BM9GRM34,Sustainable Global Corporate Bond Paris-Aligned Multifactor
-USD,(Dist)
 IE00BM9GRP64,Sustainable EM Bond USD (Dist)
 IE00BM9TSP27,Emerging Markets Ex-State-Owned Enterprises ESG Screened USD
 IE00BMBKBZ46,S&P 500 Health Care EUR (Dist)
@@ -11920,7 +11908,6 @@ IE00BMDKNW35,Crypto & Blockchain Innovators USD (Acc)
 IE00BMDPBY65,Stoxx Europe 600 Paris Aligned Climate EUR (Acc)
 IE00BMDPBZ72,S&P 500 Paris Aligned Climate USD (Acc)
 IE00BMDV7354,AC Asia Pacific Ex Japan Research Enhanced Index Equity ESG
-USD,(Acc)
 IE00BMDV7461,Ultra-Short Income USD (Dist)
 IE00BMDV7578,China A Research Enhanced Index Equity ESG USD (Acc)
 IE00BMDWYZ92,Carbon Transition Global Equity USD (Acc)
@@ -11969,7 +11956,6 @@ IE00BMYDM794,Hydrogen Economy USD (Acc)
 IE00BMYDM802,Quality Equity Dividends ESG Exclusions UK GBP (Dist)
 IE00BMYDM919,Quality Equity Dividends ESG Exclusions Europe ex-UK EUR
 IE00BMYDMB35,Quality Equity Dividends ESG Exclusions Asia Pacific
-ex-Japan,USD (Dist)
 IE00BMYDMC42,Quality Equity Dividends ESG Exclusions Emerging Markets USD
 IE00BMYMHS24,Saturna Al-Kawthar Global Focused Equity USD (Acc)
 IE00BMZ17T93,MSCI World SRI GBP Hedged (Dist)
@@ -12381,7 +12367,6 @@ LU0292104899,MSCI Europe Utilities ESG Screened EUR (Acc)
 LU0292105359,MSCI Europe Consumer Staples ESG Screened EUR (Acc)
 LU0292106084,MSCI Europe Industrials ESG Screened EUR (Acc)
 LU0292106167,Bloomberg Commodity ex-Agriculture & Livestock Swap EUR
-Hedged,(Acc)
 LU0292106241,ShortDax Daily Swap EUR (Acc)
 LU0292106753,EURO STOXX 50 Short Daily Swap EUR (Acc)
 LU0292107645,MSCI EM Swap USD (Acc)
@@ -12784,7 +12769,6 @@ LU1781541252,MSCI Core Japan JPY (Acc)
 LU1781541849,MSCI EM Asia USD (Acc)
 LU1804202403,MSCI EMU Select Factor Mix EUR (Acc)
 LU1805389258,Bloomberg MSCI Euro Area Liquid Corporates 1-5 Year
-Sustainable,EUR (Dist)
 LU1806495575,US Corp SRI USD (Acc)
 LU1812090543,High Yield Corporate Bond ESG EUR (Dist)
 LU1812091194,STOXX 600 Real Estate EUR (Dist)
@@ -12916,7 +12900,6 @@ LU2099295466,Global High Yield Sustainable USD (Acc)
 LU2099296274,Global High Yield Sustainable EUR (Acc)
 LU2099991536,Bloomberg MSCI Global Liquid Corporates Sustainable USD
 LU2099992260,Bloomberg MSCI Global Liquid Corporates Sustainable EUR
-Hedged,(Acc)
 LU2109787049,MSCI Emerging ESG USD (Acc)
 LU2109787551,MSCI Emerging ESG Leaders USD (Acc)
 LU2109787635,MSCI EMU SRI EUR (Acc)
@@ -12974,7 +12957,6 @@ LU2385068163,ESG Global Government Bond EUR (Dist)
 LU2385068593,ESG Global Government Bond EUR Hedged (Dist)
 LU2402389261,MSCI Pacific Ex Japan SRI EUR (Dist)
 LU2408468291,Bloomberg MSCI US Liquid Corporates 1-5 Year Sustainable
-Hedged,EUR (Acc)
 LU2439113387,Euro Aggregate Sustainable SRI EUR (Dist)
 LU2439119236,MSCI AC Far East Ex Japan ESG USD (Acc)
 LU2439733507,Global Aggregate SRI Hedged EUR (Acc)

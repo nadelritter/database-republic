@@ -1,0 +1,132 @@
+[
+  {
+    "ISIN": "FR0000062184",
+    "Name": "IDSud",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "JP3400650002",
+    "Name": "SBI Sumishin Net Bank",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "USD",
+    "Name": "(Dist)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "ACTIVE",
+    "Name": "EUR (Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "USD",
+    "Name": "(Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "EUR",
+    "Name": "Hedged (Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "ACTIVE",
+    "Name": "EUR (Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "PARIS",
+    "Name": "Aligned Active EUR (Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "ACTIVE",
+    "Name": "USD (Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "ACTIVE",
+    "Name": "USD (Dist)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "EUR",
+    "Name": "(Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "HEDGED",
+    "Name": "(Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "LIVESTOCK",
+    "Name": "USD (Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "CARBON",
+    "Name": "USD (Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "HEDGED",
+    "Name": "(Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "ACTIVE",
+    "Name": "EUR (dist)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "ACTIVE",
+    "Name": "EUR Hedged (Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "CARBON",
+    "Name": "EUR (Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "USD",
+    "Name": "(Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "USD",
+    "Name": "(Dist)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "USD",
+    "Name": "(Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "EX-JAPAN",
+    "Name": "USD (Dist)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "HEDGED",
+    "Name": "(Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "SUSTAINABLE",
+    "Name": "EUR (Dist)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "HEDGED",
+    "Name": "(Acc)",
+    "date": "2025-09-26"
+  },
+  {
+    "ISIN": "HEDGED",
+    "Name": "EUR (Acc)",
+    "date": "2025-09-26"
+  }
+]
