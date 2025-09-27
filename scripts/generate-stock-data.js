@@ -12,13 +12,27 @@ try {
     trim: true,
   });
 
+  // Load removed stocks list
+  const removedPath = path.join(__dirname, '..', 'data', 'removed.json');
+  let removedStocks = [];
+  try {
+    const removedContent = fs.readFileSync(removedPath, 'utf8');
+    removedStocks = JSON.parse(removedContent);
+  } catch (error) {
+    // If removed.json doesn't exist or is empty, continue with empty array
+    console.log('No removed stocks file found, all stocks marked as active');
+  }
+
+  // Create a set of removed ISINs for quick lookup
+  const removedIsins = new Set(removedStocks.map(stock => stock.ISIN));
+
   const stockData = records.map((record, index) => ({
     id: index + 1,
     name: (record.Name || record.name || '').replace(/[\x00-\x1F\x7F-\x9F]/g, '').replace(/"/g, '\\"').replace(/'/g, "\\'"),
     isin: record.ISIN || record.isin || '',
     image: '/placeholder.svg',
     added: '2025-09-26',
-    removed: false,
+    removed: removedIsins.has(record.ISIN || record.isin || ''),
   }));
 
   let jsContent = 'export const stockData = [\n';
