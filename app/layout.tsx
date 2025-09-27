@@ -6,7 +6,7 @@ import "./globals.css"
 // Trigger redeployment - Cloudflare Pages optimization
 export const metadata: Metadata = {
   title: "Republic Database",
-  description: "Database aller deutschen Aktien und Finanzinstrumente",
+  description: "Datenbank aller Aktien und ETFs auf TR",
   generator: "v0.app",
 }
 
